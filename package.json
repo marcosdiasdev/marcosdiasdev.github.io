@@ -1,8 +1,8 @@
 {
-  "name": "vitejs-react-app-template",
-  "private": true,
-  "version": "0.0.0",
+  "name": "marcosdiasdev",
+  "version": "0.0.1",
   "type": "module",
+  "homepage": "https://marcosdiasdev.github.io",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -11,9 +11,14 @@
     "build-storybook": "storybook build",
     "lint": "eslint . --ext .ts,.tsx",
     "test": "vitest",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-regular-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
     "jsdom": "^22.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -44,6 +49,7 @@
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.1.0",
     "postcss": "^8.4.24",

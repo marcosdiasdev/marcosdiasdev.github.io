@@ -1,29 +1,20 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
+import avatar from './assets/avatar.jpg';
+import AppTemplate from './components/templates/AppTemplate/AppTemplate';
 
-function App() {
-  const [count, setCount] = useState(0);
-
+const App: React.FunctionComponent = () => {
   return (
-    <div className="w-full max-w-xl my-0 mx-auto p-2 text-center">
-      <div className="flex justify-center">
-        <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-          <img src="/vite.svg" className="h-24 p-6 hover:drop-shadow-[0_0_1em_#646cffaa]" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank" rel="noreferrer">
-          <img src={reactLogo} className="h-24 p-6 hover:drop-shadow-[0_0_1em_#61dafbaa]" alt="React logo" />
-        </a>
+    <AppTemplate>
+      <div className="w-full max-w-xl my-0 mx-auto p-2 text-center">
+        <div className="flex justify-center p-3">
+          <a href="https://www.linkedin.com/in/marcos-dias-67177931/" target="_blank" rel="noreferrer">
+            <img src={avatar} className="rounded-full w-1/2 mx-auto" alt="Avatar" />
+          </a>
+        </div>
+        <h1>Marcos Dias</h1>
+        <h2>Software Engineer</h2>
       </div>
-      <h1>Vite + React</h1>
-      <div className="flex flex-col items-center gap-2 p-8">
-        <button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="text-slate-400">Click on the Vite and React logos to learn more</p>
-    </div>
+    </AppTemplate>
   );
-}
+};
 
 export default App;
